@@ -30,6 +30,9 @@ class Main extends React.Component {
 			<div>
 				<h1>The Game of Life</h1>
 				<Grid
+					gridFull={this.state.gidFull}
+					rows={this.rows}
+					cols={this.cols}
 				/>
 				<h2>Generations: {this.state.generation}</h2>
 			</div>
