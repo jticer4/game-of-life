@@ -3,13 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 class Main extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			generation: 0,
+		}
+	}
 
 	render() {
 		return (
 			<div>
 				<h1>The Game of Life</h1>
-
-				<h2>Generations: </h2>
+				<Grid
+				/>
+				<h2>Generations: {this.state.generation}</h2>
 			</div>
 		)
 	}
