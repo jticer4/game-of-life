@@ -13,6 +13,16 @@ class Grid extends React.Component {
 				let boxId = i + "_" + j;
 
 				boxClass = this.props.gridFull[i][j] ? "box on" : "box off"
+				rowsArr.push(
+					<Box
+						boxClass={boxClass}
+						key={boxId}
+						boxId={boxId}
+						row={i}
+						col={j}
+						selectBox={this.props.selectBox}
+						/>
+				)
 			}
 		}
 
@@ -45,6 +55,7 @@ class Main extends React.Component {
 					gridFull={this.state.gidFull}
 					rows={this.rows}
 					cols={this.cols}
+					slectBox={this.selectBox}
 				/>
 				<h2>Generations: {this.state.generation}</h2>
 			</div>
