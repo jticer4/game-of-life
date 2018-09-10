@@ -64,6 +64,10 @@ class Main extends React.Component {
 		}
 	}
 
+	selectBox = (row, col) => {
+		let gridCopy = arrayClone(this.state.gridFull);
+	}
+
 	render() {
 		return (
 			<div>
@@ -79,6 +83,10 @@ class Main extends React.Component {
 		)
 	}
 
+	}
+
+	function arrayClone(arr) {
+	return JSON.parse(JSON.stringify(arr));
 	}
 
 ReactDOM.render(<Main />, document.getElementById('root'));
